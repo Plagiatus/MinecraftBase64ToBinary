@@ -17,6 +17,18 @@ Example of direct input:
 
 The output can be found in the `b64:b64 output` (binary to base64) and `b64:bin output` (base64 to binary) storage fields respectively.
 
+### Utilities
+
+In the `util` folder you can find two additional converters:
+
+- Binary <=> Decimal
+    - Only supports positive numbers and only integers (so max 2147483647, or 1111111111111111111111111111111 respectively). Does not contain leading zeros.
+    - Has a lookup table for values up to 2^11, so 4095, for faster calculation. Both ways.
+- Binary <=> ASCII
+    - Only works for the first 255 characters through a lookup table. Both ways.
+    - Does not include control characters (0-31, 128-159)
+    - Expects exactly 8 characters as input and provides 8 as output (in binary form, so including leading zeroes).
+
 ## Limitations
 
 - Minecraft 1.20.2 and above.
