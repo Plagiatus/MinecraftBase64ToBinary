@@ -20,6 +20,5 @@ The output can be found in the `b64:b64 output` (binary to base64) and `b64:bin 
 ## Limitations
 
 - Minecraft 1.20.2 and above.
-- Due to the way the system is implemented, it does not support the 64th base64 character "`/`". I have chosen to use "`_`" instead for both in- and outputs.
 - There is no quadruple group checking (as would be needed for ASCII <-> Base64 encoding), just plain old bits to base64. As such, padding characters ("`=`") will be ignored / not created.
 - If the binary sequence length is not dividable by 6, it will be padded with 0 at the end.

@@ -1,6 +1,10 @@
 {
     "pack": {
         "pack_format": 16,
+        "supported_formats": {
+            "min_inclusive": 16,
+            "max_inclusive": 21
+        },
         "description": "Base64 <-> Binary string datapack by Plagiatus"
     }
 }

@@ -5,11 +5,9 @@ data modify storage b64:b64 in set string storage b64:b64 in 6
 execute store result score sectionLength b64.tmp run data get storage b64:b64 nextBlock
 execute if score sectionLength b64.tmp matches ..5 run function base64:convert/pad_to_base64 with storage b64:b64
 
-data modify storage b64:shared tag set from storage b64:b64 nextBlock
+data modify storage b64:shared input set from storage b64:b64 nextBlock
 
-function base64:convert/add_tag with storage b64:shared
-function base64:convert/tag_to_base64
-function base64:convert/remove_tag with storage b64:shared
+function base64:convert/input_to_base64 with storage b64:shared
 
 function base64:convert/combine_output_with_block with storage b64:b64
 
