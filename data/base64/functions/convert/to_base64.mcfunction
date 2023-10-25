@@ -1,3 +1,4 @@
+data remove storage b64:b64 nextBlock
 execute store success score #s b64.tmp run data modify storage b64:b64 nextBlock set string storage b64:b64 in 0 6
 execute if score #s b64.tmp matches 0 run data modify storage b64:b64 nextBlock set from storage b64:b64 in
 data modify storage b64:b64 in set string storage b64:b64 in 6
